@@ -24,3 +24,22 @@
 		display: block;
 	}
 }
+
+._icon-arrow:before {
+	content: "\e900";
+}
+._icon-phone:before {
+	content: "\e901";
+}
+._icon-spot:before {
+	content: "\e902";
+}
+._icon-vk:before {
+	content: "\e903";
+}
+._icon-instagram:before {
+	content: "\e904";
+}
+._icon-email:before {
+	content: "\e905";
+}

@@ -14,7 +14,7 @@
 //</Иконочные шрифты>==========================================================================================
 
 //<Шрифт по умолчанию>==========================================================================================
-$fontFamily: "";
+$fontFamily: "FF_DIN_Round_Pro";
 $fontSize: 16;
 //</Шрифт по умолчанию>==========================================================================================
 
@@ -37,6 +37,7 @@ $mainColor: #000;
 @import "null";
 body {
 	color: $mainColor;
+	@include adaptiv-value('font-size', 18, 14, 1);
 	&._lock {
 		overflow: hidden;
 	}
@@ -59,16 +60,7 @@ body {
 ._container {
 	max-width: $maxWidthContainer + px;
 	margin: 0 auto;
-	@media (max-width: $md1+px) {
-		max-width: 970px;
-	}
-	@media (max-width: $md2+px) {
-		max-width: 750px;
-	}
-	@media (max-width: $md3+px) {
-		max-width: none;
-		padding: 0 10px;
-	}
+	padding: 0 15px;
 }
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
 
