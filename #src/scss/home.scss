@@ -1,3 +1,60 @@
 //====================================================================================================
-
+.intro {
+  &__title {
+    line-height: 120%;
+    text-align:center;
+    color:#fff;
+    @include adaptiv-value('font-size', 70, 35, 1);
+    margin-bottom: 1em;
+    span {
+      color: $pinkColor;
+      font-weight: 600;
+    };
+  }
+  &__button {
+    color: #FFF;
+    background-color: $pinkColor;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $pinkColor;
+        background-color: #FFF;
+      }
+    }
+  }
+  &__video {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding-bottom:40%;
+    @media (max-width: $md3+px) {
+      z-index: -100;
+      background: url('../img/intro/test_1_.webp') center center / cover no-repeat;
+      padding-bottom: 70%;
+    }
+  }
+  &__overlay {
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+  }
+  &__video-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+}
 //====================================================================================================

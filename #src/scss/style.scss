@@ -38,7 +38,7 @@ $pinkColor: #f38bae;
 @import "null";
 body {
 	color: $mainColor;
-	@include adaptiv-value('font-size', 18, 14, 1);
+	@include adaptiv-value('font-size', 16, 13, 1);
 	&._lock {
 		overflow: hidden;
 	}
