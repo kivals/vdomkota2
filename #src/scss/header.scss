@@ -1,5 +1,147 @@
 //====================================================================================================
+.header {
+  &__body {
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    flex: 0 0 100px;
+    height: 100px;
+    margin-right: 30px;
+  }
+  &__menu {
+    flex: 1 0 auto;
+  }
+  &__social {
+  }
+}
 
+.menu {
+  display: flex;
+  align-items: center;
+  &__body {
+    @media (max-width: $md3+px) {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      top: 0;
+      left: -100%;
+      transition: left 0.3s ease 0s;
+      padding: 70px 15px 30px 25px;
+      background-color: $pinkColor;
+      &._active {
+        left: 0;
+      }
+    }
+  }
+  &__list {
+    @media (min-width: $md3+px) {
+      display: flex;
+      li {
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+      }
+    }
+    @media (max-width: $md3+px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+
+    @media (min-width: $md3+px) {
+      color: inherit;
+      padding-bottom: 5px;
+      transition: color 0.2s ease 0s;
+      &._active {
+        color: $pinkColor;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          background: $pinkColor;
+          width: 25px;
+          height: 2px;
+        }
+      }
+      @media (any-hover: hover) {
+        &:hover {
+          color: $pinkColor;
+        }
+      }
+    }
+    @media (max-width: $md3+px) {
+      font-size: 28px;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.social-header {
+  display: flex;
+  align-items: center;
+  &__link {
+    color: inherit;
+    font-size: 35px;
+    padding: 0 10px;
+    transition: color 0.2s ease 0s;
+    @media (min-width: $md3+px) {
+      &:hover {
+        color: $pinkColor;
+      }
+    }
+  }
+}
+
+
+.icon-menu {
+  display: none;
+  @media (max-width: $md3+px) {
+    position: relative;
+    display: block;
+    flex: 0 0 30px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 5;
+    span {
+      transition: all 0.3s ease 0s;
+      top: calc(50% - 1px);
+      left: 0px;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #000;
+      &:first-child {
+        top: 0px;
+      }
+      &:last-child {
+        top: auto;
+        bottom: 0px;
+      }
+    }
+    &._active {
+      span {
+        transform: scale(0);
+        &:first-child {
+          transform: rotate(-45deg);
+          top: calc(50% - 1px);
+        }
+        &:last-child {
+          transform: rotate(45deg);
+          bottom: calc(50% - 1px);
+        }
+      }
+    }
+  }
+}
 //====================================================================================================
 
 /*
