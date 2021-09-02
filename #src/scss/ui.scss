@@ -287,3 +287,10 @@ body.ie {
 .cat-slider__dots > .swiper-pagination-bullet-active {
 	background-color: $pinkColor;
 }
+
+._title {
+	@include adaptiv-value('font-size', 35, 24, 1);
+	color: #545454;
+	line-height: 135%;
+	margin-bottom: 1em;
+}
