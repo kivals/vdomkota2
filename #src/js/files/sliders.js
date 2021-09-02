@@ -121,3 +121,44 @@ let slider_about = new Swiper('.about__slider', {
 	//	el: '.swiper-scrollbar',
 	//},
 });
+
+if (document.querySelector('.cat-slider__body')) {
+	new Swiper('.cat-slider__body', {
+		observer: true,
+		observeParents: true,
+		speed: 800,
+		loop: true,
+		watchOverflow: true,
+		slidesPerGroup: 3,
+		// Dotts
+		pagination: {
+			el: '.cat-slider__dots',
+			clickable: true,
+		},
+		// Arrows
+		navigation: {
+			nextEl: '.slider-arrows__item_next',
+			prevEl: '.slider-arrows__item_prev',
+		},
+		breakpoints: {
+			// when window width is >= 320px
+			320: {
+				slidesPerView: 1,
+				slidesPerGroup: 1,
+				spaceBetween: 30
+			},
+			// when window width is >= 480px
+			480: {
+				slidesPerView: 2,
+				slidesPerGroup: 2,
+				spaceBetween: 45
+			},
+			// when window width is >= 768px
+			768: {
+				slidesPerView: 3,
+				slidesPerGroup: 3,
+				spaceBetween: 65
+			},
+		}
+	})
+}

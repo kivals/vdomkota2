@@ -264,3 +264,26 @@ body.ie {
 	}
 }
 //</ГОТОВЫЕ КЛАССЫ>====================================================================================================
+.cat-slider__dots.swiper-pagination-bullets {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.cat-slider__dots > .swiper-pagination-bullet {
+	display: block;
+	cursor: pointer;
+	flex: 0 0 11px;
+	height: 11px;
+	background-color: #818181;
+	border-radius: 50%;
+	transition: background-color 0.3s ease 0s;
+	margin: 2px 0px;
+	&:not(:last-child) {
+		margin-right: 12px;
+	}
+}
+
+.cat-slider__dots > .swiper-pagination-bullet-active {
+	background-color: $pinkColor;
+}
