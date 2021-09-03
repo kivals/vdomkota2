@@ -256,5 +256,46 @@
 //====================================================================================================
 
 //=========ABOUTUS===========================================================================================
+.aboutus {
+  @include adaptiv-value('padding-top', 80, 40, 1);
+  @include adaptiv-value('padding-bottom', 80, 40, 1);
+  &__container {
+    @media (min-width: $md3+px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__image {
+    flex: 0 0 30%;
+    border-radius: 50%;
+    overflow: hidden;
+    padding-bottom: 30%;
+    margin-right: 30px;
+    @media (max-width: $md3+px) {
+      width: 30%;
+      height: 30%;
+      margin: 0 auto 20px auto;
+    }
+  }
+  &__content {
+    flex: 0 1 auto;
+    @media (max-width: $md3+px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 
+  &__title {
+
+  }
+
+  &__text {
+    line-height: 150%;
+    color: #4c4c4c;
+    @media (max-width: $md3+px) {
+      text-align: center;
+    }
+  }
+}
 //====================================================================================================
