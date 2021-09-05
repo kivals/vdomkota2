@@ -53,7 +53,9 @@
   &__link {
     display: block;
     position: relative;
-
+    ._active {
+      color: $pinkColor
+    }
     @media (min-width: $md3+px) {
       color: inherit;
       padding-bottom: 5px;
