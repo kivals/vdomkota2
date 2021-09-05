@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Котик Марфа"
+})
+<body>
+<div class="wrapper">
+  @@include('_header.html',{})
+  <main class="page page__find">
+    <section class="cat-details">
+      <div class="cat-details__slider slider-cats">
+        <div class="slider-cats__body _swiper"></div>
+        <div class="slider-cats__arrows slider-cats-arrows">
+          <button type="button" class="slider-cats-arrows__item slider-cats-arrows__item_prev _icon-arrow"></button>
+          <button type="button" class="slider-cats-arrows__item slider-cats-arrows__item_next _icon-arrow"></button>
+        </div>
+        <div class="slider-cats-arrows__dots"></div>
+      </div>
+      <div class="cat-details__description cat-description">
+        <h3 class="cat-description__name _title">Кличка: Марфа</h3>
+        <ul></ul>.cat-description__list
+      </div>
+    </section>
+  </main>
+  @@include('_footer.html',{})
+</div>
+@@include('_popup.html',{})
+@@include('_js.html',{})
+</body>
+</html>
