@@ -162,3 +162,24 @@ if (document.querySelector('.cat-slider__body')) {
 		}
 	})
 }
+
+if (document.querySelector('.slider-cats__body')) {
+	new Swiper('.slider-cats__body', {
+		observer: true,
+		observeParents: true,
+		speed: 800,
+		loop: true,
+		watchOverflow: true,
+		slidesPerGroup: 1,
+		// Dotts
+		pagination: {
+			el: '.slider-cats__dots',
+			clickable: true,
+		},
+		// Arrows
+		navigation: {
+			nextEl: '.slider-cats-arrows__item_next',
+			prevEl: '.slider-cats-arrows__item_prev',
+		},
+	})
+}

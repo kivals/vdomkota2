@@ -36,6 +36,7 @@
   }
 
   &__copy {
+    @include adaptiv-value('font-size', 12, 10, 1);
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -43,14 +44,24 @@
     color: #8c94a7;
     padding: 10px 0;
     text-align: center;
-    font-size: 12px;
     font-style: italic;
     opacity: 0.7;
+    a {
+      color: inherit;
+      transition: all 0.3s ease 0s;
+      @media (any-hover: hover) {
+        &:hover {
+          color: $pinkColor;
+          font-weight: 600;
+          opacity: 1;
+        }
+      }
+    }
   }
 }
 
 .footer-contacts {
-  @include adaptiv-value('padding-bottom', 40, 15, 1);
+  @include adaptiv-value('padding-bottom', 40, 25, 1);
   padding: 0 10px;
   &__title {
     @include adaptiv-value('font-size', 30, 16, 1);
