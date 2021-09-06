@@ -30,8 +30,9 @@
   }
   &__button {
     align-self: center;
-    color: $pinkColor;
+    color: #000;
     background-color: #FFF;
+    border: 2px solid $pinkColor;
     @media (any-hover: hover) {
       &:hover {
         color: #FFF;
