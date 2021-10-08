@@ -301,3 +301,73 @@
   }
 }
 //====================================================================================================
+
+//=================================CATS-COUNT===================================================================
+.cats-count {
+  position: relative;
+  @include adaptiv-value('padding-top', 80, 40, 1);
+  @include adaptiv-value('padding-bottom', 80, 40, 1);
+  background: url("../img/cats-count/back.webp") no-repeat center center;;
+  background-size:cover;
+
+  &__overlay {
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  &__body {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    color: white;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+}
+.item-count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  @media (max-width: $md4+px) {
+    padding: 20px;
+  }
+
+  &__pic {
+    margin-bottom: 1em;
+    img {
+      height: 100px;
+      width: 100px;
+    }
+  }
+
+  &__digit {
+    @include adaptiv-value('font-size', 52, 36, 1);
+    color: #FFF;
+    margin-bottom: 0.7em;
+    font-weight: 700;
+  }
+
+  &__description {
+    color: #FFF;
+    @include adaptiv-value('font-size', 24, 12, 1);
+  }
+}
+//====================================================================================================
