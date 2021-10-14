@@ -305,9 +305,9 @@
 //=================================CATS-COUNT===================================================================
 .cats-count {
   position: relative;
-  @include adaptiv-value('padding-top', 80, 40, 1);
-  @include adaptiv-value('padding-bottom', 80, 40, 1);
-  background: url("../img/cats-count/back.jpeg") no-repeat center center;;
+  @include adaptiv-value('padding-top', 50, 20, 1);
+  @include adaptiv-value('padding-bottom', 50, 20, 1);
+  background: url("../img/cats-count/back.jpg") no-repeat center center;;
   background-size:cover;
 
   &__overlay {
@@ -332,6 +332,7 @@
     color: white;
     font-weight: 500;
     text-align: center;
+    margin-bottom: 0.5em;
   }
 
   &__content {
@@ -345,9 +346,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px;
-  @media (max-width: $md4+px) {
-    padding: 20px;
+  padding: 35px;
+  @media (max-width: $md3+px) {
+    padding: 15px;
   }
 
   &__pic {
@@ -356,10 +357,18 @@
       height: 100px;
       width: 100px;
     }
+    @media (max-width: $md3+px) {
+      padding: 10px;
+      img {
+        height: 70px;
+        width: 70px;
+      }
+    }
+
   }
 
   &__digit {
-    @include adaptiv-value('font-size', 52, 36, 1);
+    @include adaptiv-value('font-size', 45, 24, 1);
     color: #FFF;
     margin-bottom: 0.7em;
     font-weight: 700;
