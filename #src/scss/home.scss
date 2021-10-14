@@ -29,7 +29,7 @@
     padding-bottom:40%;
     @media (max-width: $md3+px) {
       z-index: -100;
-      background: url('../img/intro/intro-static.webp') center center / cover no-repeat;
+      background: url('../img/intro/intro-static.jpeg') center center / cover no-repeat;
       padding-bottom: 70%;
     }
   }
@@ -307,7 +307,7 @@
   position: relative;
   @include adaptiv-value('padding-top', 80, 40, 1);
   @include adaptiv-value('padding-bottom', 80, 40, 1);
-  background: url("../img/cats-count/back.webp") no-repeat center center;;
+  background: url("../img/cats-count/back.jpeg") no-repeat center center;;
   background-size:cover;
 
   &__overlay {
