@@ -205,10 +205,17 @@
     }
   }
   &__additional {
-    font-size: 12px;
-    line-height: 140%;
+    font-size: 15px;
+    letter-spacing: .05em;
+    line-height: 150%;
     font-style: italic;
     color: #b2b2b2;
+    span {
+      color: #292929;
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: .06em;
+    }
   }
 }
 //====================================================================================================
@@ -270,6 +277,7 @@
     @media (min-width: $md3+px) {
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
   }
   &__image {
