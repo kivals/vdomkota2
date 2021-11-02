@@ -1,6 +1,14 @@
 document.addEventListener("DOMContentLoaded", ready);
 
 function ready() {
+    const showMoreButton = document.querySelector('.about-host-text__button');
+    showMoreButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        const hiddenElement = document.querySelector('.about-host-text__text.about-host-text__text_hidden');
+        e.target.innerHTML = hiddenElement.classList.contains('show') ? 'Показать еще...' : 'Скрыть';
+        hiddenElement.classList.toggle('show');
+    })
+
     /**
      * Показать анимационное увеличивающиеся числовое значение в элементе
      * @param el элемент для рендера числа
@@ -38,7 +46,7 @@ function ready() {
 
     let observer = new IntersectionObserver(onEntries);
 
-    // Cписок Dom элементов для анимации
+    // Список Dom элементов для анимации
     const digitNodes = document.querySelectorAll('.item-count__digit');
     // Вешаем слушателя на каждый элемент
     digitNodes.forEach(node => observer.observe(node))
