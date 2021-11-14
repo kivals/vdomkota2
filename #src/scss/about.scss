@@ -8,13 +8,9 @@
 
 .about-gallery {
   @include adaptiv-value('padding-bottom', 50, 20, 1);
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 1rem;
-
-  &__photo {
-    padding-bottom: 100%;
-  }
+  //display: grid;
+  //grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  //grid-gap: 1rem;
 }
 
 .about-text {
@@ -110,6 +106,57 @@
       &.show {
         display: block;
       }
+    }
+  }
+}
+
+.slider-about {
+  position: relative;
+  &__body {
+
+  }
+
+  &__slide {
+    padding-bottom: 25%;
+    &.swiper-slide img {
+      opacity: 0.3;
+      transition: opacity 0.3s ease 0s;
+    }
+    &.swiper-slide-active img {
+      opacity: 1;
+    }
+  }
+
+  &__arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.slider-about-arrows {
+  z-index: 1;
+  width: calc(100% / 2.1);
+  display: flex;
+  justify-content: space-between;
+  &__item {
+    color: #000;
+    font-size: 20px;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $pinkColor;
+        color: #fff;
+      }
+    }
+    &_prev {
+      transform: rotate(-180deg);
+    }
+    &_next {
     }
   }
 }

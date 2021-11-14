@@ -183,3 +183,26 @@ if (document.querySelector('.slider-cats__body')) {
 		},
 	})
 }
+
+if (document.querySelector('.slider-about__body')) {
+	new Swiper('.slider-about__body', {
+		observer: true,
+		observeParents: true,
+		speed: 800,
+		slidesPerView: 2.2,
+		watchOverflow: true,
+		centeredSlides: true,
+		loop: true,
+		freeMode: true,
+		// Dotts
+		pagination: {
+			el: '.slider-about__dots',
+			clickable: true,
+		},
+		// Arrows
+		navigation: {
+			nextEl: '.slider-about-arrows__item_next',
+			prevEl: '.slider-about-arrows__item_prev',
+		},
+	})
+}
