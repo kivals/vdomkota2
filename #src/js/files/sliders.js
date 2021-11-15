@@ -188,8 +188,8 @@ if (document.querySelector('.slider-about__body')) {
 	new Swiper('.slider-about__body', {
 		observer: true,
 		observeParents: true,
-		speed: 800,
-		slidesPerView: 2.2,
+		speed: 400,
+		dynamic: true,
 		watchOverflow: true,
 		centeredSlides: true,
 		loop: true,
@@ -204,5 +204,20 @@ if (document.querySelector('.slider-about__body')) {
 			nextEl: '.slider-about-arrows__item_next',
 			prevEl: '.slider-about-arrows__item_prev',
 		},
+		breakpoints: {
+			// when window width is >= 320px
+			320: {
+				slidesPerView: 1,
+			},
+			// when window width is >= 480px
+			480: {
+				slidesPerView: 1,
+			},
+			// when window width is >= 768px
+			768: {
+				spaceBetween: 70,
+				slidesPerView: 2.2,
+			},
+		}
 	})
 }

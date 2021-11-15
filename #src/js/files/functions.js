@@ -178,7 +178,7 @@ for (let index = 0; index < tabs.length; index++) {
 Для заголовков слойлеров пишем атрибут data-spoller
 Если нужно включать\выключать работу спойлеров на разных размерах экранов
 пишем параметры ширины и типа брейкпоинта.
-Например: 
+Например:
 data-spollers="992,max" - спойлеры будут работать только на экранах меньше или равно 992px
 data-spollers="768,min" - спойлеры будут работать только на экранах больше или равно 768px
 
@@ -300,7 +300,7 @@ if (spollersArray.length > 0) {
 	}
 }
 //=================
-//Gallery
+// Gallery
 let gallery = document.querySelectorAll('._gallery');
 if (gallery) {
 	gallery_init();
@@ -646,7 +646,7 @@ function initRatings() {
 		const ratingActiveWidth = index / 0.05;
 		ratingActive.style.width = `${ratingActiveWidth}%`;
 	}
-	// Возможность указать оценку 
+	// Возможность указать оценку
 	function setRating(rating) {
 		const ratingItems = rating.querySelectorAll('.rating__item');
 		for (let index = 0; index < ratingItems.length; index++) {

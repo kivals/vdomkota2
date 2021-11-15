@@ -57,5 +57,5 @@ function ready() {
         if (linkUrl.pathname === document.location.pathname && !linkUrl.hash) {
             link.classList.add('_active');
         }
-    })
+    });
 }
