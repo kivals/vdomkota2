@@ -2,12 +2,14 @@ document.addEventListener("DOMContentLoaded", ready);
 
 function ready() {
     const showMoreButton = document.querySelector('.about-host-text__button');
-    showMoreButton.addEventListener('click', (e) => {
-        e.preventDefault();
-        const hiddenElement = document.querySelector('.about-host-text__text.about-host-text__text_hidden');
-        e.target.innerHTML = hiddenElement.classList.contains('show') ? 'Показать еще...' : 'Скрыть';
-        hiddenElement.classList.toggle('show');
-    })
+    if (showMoreButton) {
+        showMoreButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            const hiddenElement = document.querySelector('.about-host-text__text.about-host-text__text_hidden');
+            e.target.innerHTML = hiddenElement.classList.contains('show') ? 'Показать еще...' : 'Скрыть';
+            hiddenElement.classList.toggle('show');
+        });
+    }
 
     /**
      * Показать анимационное увеличивающиеся числовое значение в элементе
